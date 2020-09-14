@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if (selectedYear<=year ) {
                 if (selectedYear == year && (month<selectedMonth || day<selectedDay))Toast.makeText(this,"Pick Your Birth Date",Toast.LENGTH_LONG).show()
                 else{
-                        val minute : Int = (year-selectedYear)*525600+(selectedMonth+1)*43200 + selectedDay *1440
+                        val minute : Int = (selectedYear)*525600+(selectedMonth+1)*43200 + selectedDay *1440
                         val ageInMinutes = "$minute"
                         tvAgeInMinutes.setText(ageInMinutes)
                 }
